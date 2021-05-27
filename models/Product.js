@@ -32,7 +32,10 @@ Product.init(
     },
     category_id: {
       type: DataTypes.INTEGER,
-      
+      references: {
+        model: 'Category',
+        key: 'id',
+      },
     },
   },
   {
@@ -45,9 +48,3 @@ Product.init(
 );
 
 module.exports = Product;
-
-// Product
-
-// --     category_id
-// --         -Integer.
-// --         -References the Category model's id.
